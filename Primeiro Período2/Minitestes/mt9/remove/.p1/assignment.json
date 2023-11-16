@@ -1,0 +1,32 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "- type: script\n  script: python public_tests.py {}\n\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "category": "public",
+        "content": "# coding: utf-8\nimport unittest\nimport sys\n\nmodule = sys.argv[-1].split(\".py\")[0]\n\nclass PublicTests(unittest.TestCase):\n\n    @classmethod\n    def setUpClass(cls):\n        global remove_maiores\n        undertest = __import__(module)\n        remove_maiores = getattr(undertest, 'remove_maiores', None)\n\n\n    def test_1(self):\n        lista1 = [8, 7, 3, 8, 2]\n        assert remove_maiores(lista1) == None\n        assert lista1 == [7, 3, 2]\n\n\nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+        "mode": "r",
+        "name": "public_tests.py"
+      },
+      {
+        "content": "{\n  \"tests\": [],\n  \"title\": \"Remove Maiores\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 6358761537011712,
+    "index": null,
+    "user": "maria.eduarda.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 6358761537011712,
+  "key": "6358761537011712",
+  "site": "prog1",
+  "user": "maria.eduarda.farias@ccc.ufcg.edu.br"
+}

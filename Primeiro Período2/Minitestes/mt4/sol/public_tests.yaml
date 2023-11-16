@@ -1,0 +1,13 @@
+- input: |
+    ceu
+    abacate
+    exemplo
+  output: |
+    A menor palavra dos extremos é: ceu
+
+- input: |
+    boneca
+    lapis
+    bola
+  output: |
+    A menor palavra dos extremos é: bola

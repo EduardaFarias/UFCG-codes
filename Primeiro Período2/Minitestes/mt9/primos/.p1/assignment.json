@@ -1,0 +1,32 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "- type: script\n  script: python3 public_tests.py {}\n\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "category": "public",
+        "content": "import unittest\nimport sys\n\nmodule = sys.argv[-1].split(\".py\")[0]\n\nclass PublicTests(unittest.TestCase):\n\n    @classmethod\n    def setUpClass(cls):\n        global seleciona_primos\n        undertest = __import__(module)\n        seleciona_primos = getattr(undertest, 'seleciona_primos', None)\n\n    def test_1_publico(self):\n        lista = [3, 6, 9, 12, 15, 18, 19, 21]\n        assert seleciona_primos(lista) == [3, 19]\n        assert lista == [3, 6, 9, 12, 15, 18, 19, 21]\n\n\nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+        "mode": "r",
+        "name": "public_tests.py"
+      },
+      {
+        "content": "{\n  \"tests\": [],\n  \"title\": \"Seleciona Primos\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 5093363944521728,
+    "index": null,
+    "user": "maria.eduarda.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 5093363944521728,
+  "key": "5093363944521728",
+  "site": "prog1",
+  "user": "maria.eduarda.farias@ccc.ufcg.edu.br"
+}

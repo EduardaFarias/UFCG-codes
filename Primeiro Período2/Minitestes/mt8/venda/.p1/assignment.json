@@ -1,0 +1,26 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "- input: |\n    80.0, 0.3, 0.2, 0.1\n    -\n  output: |\n    O valor de venda para este produto deve ser R$ 128.00\n\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "content": "{\n  \"tests\": [],\n  \"title\": \"Valor de Venda\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 5311813530943488,
+    "index": null,
+    "user": "maria.eduarda.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 5311813530943488,
+  "key": "5311813530943488",
+  "site": "prog1",
+  "user": "maria.eduarda.farias@ccc.ufcg.edu.br"
+}

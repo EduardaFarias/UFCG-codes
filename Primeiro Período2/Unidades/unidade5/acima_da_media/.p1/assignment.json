@@ -1,0 +1,26 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "- input: |\n    100.0\n    77 72 65\n    101 110\n    fim\n  output: |\n    101 110\n\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "content": "{\n  \"tests\": [],\n  \"title\": \"Acima da média\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 5060492244549632,
+    "index": null,
+    "user": "maria.eduarda.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 5060492244549632,
+  "key": "5060492244549632",
+  "site": "prog1",
+  "user": "maria.eduarda.farias@ccc.ufcg.edu.br"
+}

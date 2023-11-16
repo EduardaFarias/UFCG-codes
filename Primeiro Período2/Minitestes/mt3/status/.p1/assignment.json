@@ -1,0 +1,26 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "- input: |\n    7.5\n  output: |\n    média final: 7.5\n\n- input: |\n    6.5\n    8.0\n  output: |\n    média final: 7.1\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "content": "{\n  \"tests\": [],\n  \"title\": \"Status\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 4950318213234688,
+    "index": null,
+    "user": "maria.eduarda.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 4950318213234688,
+  "key": "4950318213234688",
+  "site": "prog1",
+  "user": "maria.eduarda.farias@ccc.ufcg.edu.br"
+}

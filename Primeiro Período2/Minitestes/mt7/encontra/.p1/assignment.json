@@ -1,0 +1,32 @@
+{
+  "dirname": null,
+  "full_resource": {
+    "dirname": null,
+    "files": [
+      {
+        "category": "public",
+        "content": "import unittest\nimport sys\n\nmodule = sys.argv[-1].split(\".py\")[0]\n\nclass PublicTests(unittest.TestCase):\n\n    @classmethod\n    def setUpClass(cls):\n        global elemento_faltando\n        undertest = __import__(module)\n        elemento_faltando = getattr(undertest, 'elemento_faltando', None)\n\n    def test_basico1(self):\n        lista1 = [1, 2, 3, 4]\n        lista2 = [1, 2, 3, 4, 5]\n        assert elemento_faltando(lista1, lista2) == 5\n        assert lista1 == [1, 2, 3, 4]\n        assert lista2 == [1, 2, 3, 4, 5]\n\n    def test_basico2(self):\n        lista1 = [1, 7, 6]\n        lista2 = [6, 4, 7, 1]\n        assert elemento_faltando(lista1, lista2) == 4\n        assert lista1 == [1, 7, 6]\n        assert lista2 == [6, 4, 7, 1]\n\nif __name__ == '__main__':\n    loader = unittest.TestLoader()\n    runner = unittest.TextTestRunner()\n    runner.run(loader.loadTestsFromModule(sys.modules[__name__]))\n",
+        "mode": "r",
+        "name": "public_tests.py"
+      },
+      {
+        "category": "public",
+        "content": "- type: script\n  script: python3 public_tests.py {}\n",
+        "mode": "ro",
+        "name": "public_tests.yaml"
+      },
+      {
+        "content": "{\n  \"tests\": [],\n  \"title\": \"Elemento Faltando\"\n}",
+        "mode": "r",
+        "name": "tst.json"
+      }
+    ],
+    "iid": 5063183913975808,
+    "index": null,
+    "user": "maria.eduarda.farias@ccc.ufcg.edu.br"
+  },
+  "iid": 5063183913975808,
+  "key": "5063183913975808",
+  "site": "prog1",
+  "user": "maria.eduarda.farias@ccc.ufcg.edu.br"
+}
